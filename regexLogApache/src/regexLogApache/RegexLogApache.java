@@ -29,11 +29,11 @@ public class RegexLogApache {
 		 
 		Scanner in = new Scanner(System.in);
 		// Cadena en la que buscar el patron
-		String INPUT = in.nextLine();
+		String input = in.nextLine();
 		
 		in.close();
 		// Mostrar la cadena
-		System.out.println("Cadena INPUT:"+INPUT);
+		System.out.println("Cadena INPUT:"+input);
 		
 		// PATRON a buscar
 		final String PATRON_MOZILLA = "Mozilla";
@@ -43,8 +43,8 @@ public class RegexLogApache {
 		Pattern patron1 = Pattern.compile(PATRON_MOZILLA);
 		Pattern patron2 = Pattern.compile(PATRON_SAFARI);
 
-		Matcher matcher1 = patron1.matcher(INPUT);
-		Matcher matcher2 = patron2.matcher(INPUT);
+		Matcher matcher1 = patron1.matcher(input);
+		Matcher matcher2 = patron2.matcher(input);
 
 		int contador1 = 0;
 		while (matcher1.find()) {
